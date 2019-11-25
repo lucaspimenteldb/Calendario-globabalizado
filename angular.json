@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "schedule-ang8": {
+    "calendario-agenda": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/schedule-ang8",
+            "outputPath": "dist/calendario-agenda",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "schedule-ang8:build"
+            "browserTarget": "calendario-agenda:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "schedule-ang8:build:production"
+              "browserTarget": "calendario-agenda:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "schedule-ang8:build"
+            "browserTarget": "calendario-agenda:build"
           }
         },
         "test": {
@@ -102,7 +102,7 @@
         }
       }
     },
-    "schedule-ang8-e2e": {
+    "calendario-agenda-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "schedule-ang8:serve"
+            "devServerTarget": "calendario-agenda:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "schedule-ang8:serve:production"
+              "devServerTarget": "calendario-agenda:serve:production"
             }
           }
         },
@@ -131,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "schedule-ang8"
+  "defaultProject": "calendario-agenda"
 }

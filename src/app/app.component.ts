@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EventSettingsModel, DayService, WeekService, WorkWeekService, MonthService, AgendaService } from '@syncfusion/ej2-angular-schedule';
+import { EventSettingsModel, DayService, WeekService, WorkWeekService, MonthService, AgendaService, TimelineViewsService, TimelineMonthService } from '@syncfusion/ej2-angular-schedule';
 import { L10n, loadCldr } from '@syncfusion/ej2-base';
 import * as numberingSystems from 'cldr-data/supplemental/numberingSystems.json';
 import * as gregorian from 'cldr-data/main/pt/ca-gregorian.json';
@@ -118,21 +118,24 @@ L10n.load({
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [DayService, WeekService, WorkWeekService, MonthService, AgendaService],
+  providers: [DayService, WeekService, WorkWeekService, MonthService, AgendaService, TimelineViewsService, TimelineMonthService],
   styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
-  title = 'schedule-ang8';
+  title = 'calendario-agenda';
+
   public data: object[] = [{
     Id: 1,
     Subject: 'Meeting',
-    StartTime: new Date(2018, 1, 15, 10, 0),
-    EndTime: new Date(2018, 1, 15, 12, 30)
+    StartTime: new Date(2019, 10, 15, 10, 0),
+    EndTime: new Date(2019, 10, 15, 12, 30)
   }];
+
   public eventSettings: EventSettingsModel = {
     dataSource: this.data
-  }
-  public selectedDate: Date = new Date(2018, 1, 15);
+  };
+
+  public selectedDate: Date = new Date(2019, 10, 15);
   public views: Array<string> = ['Day', 'Week', 'WorkWeek', 'Month'];
 }

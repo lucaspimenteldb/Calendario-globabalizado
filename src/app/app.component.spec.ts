@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'schedule-ang8'`, () => {
+  it(`should have as title 'calendario-agenda'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('schedule-ang8');
+    expect(app.title).toEqual('calendario-agenda');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to schedule-ang8!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to calendario-agenda!');
   });
 });
